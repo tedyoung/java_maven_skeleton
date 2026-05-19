@@ -2,8 +2,8 @@ package com.codemanship;
 
 public class Order {
 
-	public void add(Product product) {
-		
+	public void add(Product product, int quantity) {
+		product.hold(quantity);
 	}
 
 }
