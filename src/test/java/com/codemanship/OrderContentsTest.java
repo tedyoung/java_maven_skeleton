@@ -25,11 +25,12 @@ public class OrderContentsTest {
     
     @Test
     void addProductToOrderAndOrderRemembersProduct() {
-    	List<Product> expectedProducts = new ArrayList<Product>();
         Product product = new Product();
-        expectedProducts.add(product);
-    	Order order = new Order();
-    	order.add(product, 1);
-		assertEquals(expectedProducts, order.getProducts());
+        Order order = new Order();
+
+        order.add(product, 1);
+
+        List<Product> expectedProducts = List.of(product);
+        assertEquals(expectedProducts, order.getProducts());
     }
 }
