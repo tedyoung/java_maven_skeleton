@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Order {
 	
-	private List<Product> products = new ArrayList<>();
+	private List<Item> items = new ArrayList<>();
 
 	public void add(Product product, int quantity) {
 		product.hold(quantity);
-		products.add(product);
+		items.add(new Item(product, quantity));
 	}
 
-	public List<Product> getProducts() {
-		return products;
+	public List<Item> getItems() {
+		return items;
 	}
 
 }
